@@ -14,6 +14,7 @@
       <commandTopic>cmd_vel</commandTopic>
       <odometryTopic>odom</odometryTopic>
       <odometryFrame>odom</odometryFrame>
+      <publishOdomTF>true</publishOdomTF>
       <robotBaseFrame>robot_footprint</robotBaseFrame>
       <publishWheelTF>false</publishWheelTF>
       <publishWheelJointState>false</publishWheelJointState>
@@ -22,7 +23,6 @@
       <wheelTorque>5</wheelTorque>
       <odometrySource>world</odometrySource>
       <publishTf>1</publishTf>
-      <publishOdomTF>true</publishOdomTF>
     </plugin>
   </gazebo>
 
@@ -111,5 +111,7 @@
   <gazebo reference="chassis">
     <material>Gazebo/Wood</material>
   </gazebo>
+
+
 
 </robot>
