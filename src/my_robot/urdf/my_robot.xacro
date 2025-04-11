@@ -159,7 +159,7 @@
         <dynamic damping="1.0" friction="1.0"/>
       </joint>
 
-      <link name="camera_link_optical">
+      <link name="camera">
 
         <inertial>
           <mass value="0.1"/>
@@ -190,12 +190,22 @@
 
       </link>
 
-      <joint name="camera_optical_joint" type="fixed">
-        <origin xyz="0.17 0 0.025" rpy="0 0 0"/>
+      <joint name="camera_joint" type="fixed">
+        <origin xyz="0.225 0 0" rpy="0 0 0" />
         <parent link="chassis"/>
-        <child link="camera_link_optical"/>
+        <child link="camera" />
+        <axis xyz="0 1 0" rpy="0 0 0"/>
       </joint>
 
+      <joint name="camera_optical_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="-1.5707 0 -1.5707" />
+        <parent link="camera"/>
+        <child link="camera_link_optical" />
+      </joint>
+
+      <link name="camera_link_optical">
+      </link>
+	
 
       <link name="hokuyo">
 
